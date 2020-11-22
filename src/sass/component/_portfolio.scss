@@ -1,0 +1,120 @@
+.portfolio {
+    width: 100%;
+    height: 500px;
+    
+    height: 600px;
+    width: 100%;
+    position: abs($number: 0);
+    @include responsive(765px) {
+        
+      &::before {
+        width: 0;
+        height: 0;
+        display: none;
+      }
+      &::after {
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 100%;
+      background: $white;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 100%;
+      background: #efefef;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+    &__section {
+      @include flexVertical;
+      height: 500px;
+      width: 100%;
+      z-index: 2;
+      @include responsive(765px) {
+        margin-top: 700px;
+      }
+    }
+  
+    &__content {
+      &-h6 {
+        color: $green;
+        font-weight: 300;
+        font-size: 17px;
+        text-transform: uppercase;
+        letter-spacing: 14px;
+        margin-bottom: 5px;
+        @include responsive(765px) {
+            margin-left: 150px;
+          text-align: center;
+        }
+      }
+      &-h3 {
+        font-size: 60px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-shadow: 0 8px rgba(0, 0, 0, 0.05);
+        @include responsive(765px) {
+            margin-left: 115px;
+
+          font-size: 30px;
+          padding-left: 50px;
+        }
+      }
+    }
+    
+    &__card {
+      background: $white;
+      text-align: center;
+      
+      padding-bottom: 15px;
+      @include responsive(765px) {
+        margin-top: 50px;
+        bottom: 150px;
+      }
+      &-img img {
+          float: left;
+        width: 33.33%;
+        height: auto;
+        @include responsive(765px) {
+          width: 300px;
+          top: -250px;
+        }
+      }
+    }
+    &-name {
+      font-size: 18px;
+    }
+    &-expert {
+      color: $silver;
+      font-size: 14px;
+    }
+    .mypara{
+        font-size: 15px;
+        justify-content: center;
+        align-items: center;
+        top: 150px;
+        padding-left: 150px;
+        @include responsive(765px) {
+            margin-right: 40px;
+          }
+
+    }
+    .para{
+        top: 5px;
+        margin-top: 55px;
+    }
+  }

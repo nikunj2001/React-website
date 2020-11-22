@@ -1,0 +1,45 @@
+.show{
+    width: 100%;
+    @include bgImage('/images/1.jpg');
+    height: 500px;
+   background-color: rgba(0,0,0,0.6);
+   @include flexVertical();
+   color: $white;
+    &__content h1{
+        font-size:45px ;
+        font-weight: 700;
+        @include responsive(765px){
+            padding: 15px;
+        }
+
+    }
+    &__card{
+        position: absolute;
+        bottom: -230px;
+        width: 470px;
+        padding: 80px 40px;
+        background: $green;
+        right: 0;
+        color: $black;
+        @include responsive(765px){
+            // width: 300px;
+            bottom: -450px;
+        }
+        &-h6{
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+        &-h4{
+            font-size: 30px;
+            font-weight: 600;
+            color: #0c0d16;
+            margin-bottom: 10px;
+        }
+        &-text{
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+    }
+}
